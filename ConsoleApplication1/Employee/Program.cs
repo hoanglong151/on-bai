@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rectangle
+namespace Employee
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Rectangle r1 = new Rectangle();
-            Console.WriteLine("The Rectangle has Length of " + r1.getLength() + " Width of " + r1.getWidth() + " and Perimeter of " + r1.getPerimeter() + " and Area of " + r1.getArea());
-            Rectangle r2 = new Rectangle(2,1);
-            Console.WriteLine("The Rectangle has Length of " + r2.getLength() + " Width of " + r2.getWidth() + " and Perimeter of " + r2.getPerimeter() + " and Area of " + r2.getArea());
+            Employee e1 = new Employee(2,"Hoang","Long",2000);
+            Console.WriteLine("The Employee has ID of " + e1.getID() + " FirstName of " + e1.getFirstName() + " and LastName of " + e1.getLastName() + " and Salary of " + e1.getSalary());
+            Employee e2 = new Employee(12, "Hoang", "Long", 3000);
+            Console.WriteLine("The Employee has ID of {0} , Name : {1} , Salary : {2} , AnnualSalary : {3} and RaiseSalary : {4} " ,e2.getID() , e2.getName() , e2.getSalary() , e2.getAnnualSalary() , e2.RaiseSalary(100));
         }
     }
 }

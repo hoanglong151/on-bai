@@ -49,7 +49,7 @@ namespace MyPoint
         }
         public void setCenterX(int x)
         {
-            
+            this.center.SetX(x);
         }
     }
 }

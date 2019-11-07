@@ -15,20 +15,34 @@ namespace WindowsFormsApplication2
         public Form1()
         {
             InitializeComponent();
+            this.btnCompute.Click += new System.EventHandler(this.btnCompute_Click);
         }
         private void btnCompute_Click(object sender, EventArgs e)
         {
-            this.btnCompute.Click +=new System.EventHandler(this.btnCompute_Click);
+            //this.btnCompute.Click +=new System.EventHandler(this.btnCompute_Click);
+            //string inValue;
+            //double purchaseAmt, percent, ans;
+            //inValue = txtPurchase.Text;
+            //purchaseAmt = double.Parse(inValue);
+            //inValue = label5.Text; 
+            //inValue = inValue.Remove(inValue.Length - 1, 1);
+            //percent = double.Parse(inValue) / 100;
+            //percent = (double.Parse(label5.Text.Remove(label5.Text.Length - 1, 1))) / 100;
+            //ans = (purchaseAmt * percent) + purchaseAmt;
+            //txtTotalDue.Text = String.Format("{0:C}", ans).ToString();
+
             string inValue;
             double purchaseAmt, percent, ans;
             inValue = txtPurchase.Text;
             purchaseAmt = double.Parse(inValue);
-            inValue = label5.Text; 
+            inValue = label5.Text;
             inValue = inValue.Remove(inValue.Length - 1, 1);
-            percent = double.Parse(inValue) / 100;
-            percent = (double.Parse(label5.Text.Remove(label5.Text.Length - 1, 1))) / 100;
-            ans = (purchaseAmt * percent) + purchaseAmt;
+            percent = double.Parse(inValue);
+            percent = (purchaseAmt * percent) / 100;
+            ans = purchaseAmt + percent;
             txtTotalDue.Text = String.Format("{0:C}", ans).ToString();
+            
+
         }
 
     }
